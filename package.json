@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Command line HTTP client.",
   "main": "index.js",
+  "bin": {
+    "annie": "./bin/annie.js"
+  },
   "dependencies": {
     "annie": "richRemer/annie",
     "propertize": "^1.2",
