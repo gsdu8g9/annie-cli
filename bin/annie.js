@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var util = require("util"),
     statuses = require("http").STATUS_CODES,
     annie = require("annie"),
