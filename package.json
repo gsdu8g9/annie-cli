@@ -4,9 +4,10 @@
   "description": "Command line HTTP client.",
   "main": "index.js",
   "dependencies": {
-    "annie": "*",
-    "node-getopt": "~0.2",
-    "propertize": "^1.2"
+    "annie": "richRemer/annie",
+    "propertize": "^1.2",
+    "squabble": "*",
+    "es6-promise": "~1"
   },
   "devDependencies": {
     "mocha": "~1",
