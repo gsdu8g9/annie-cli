@@ -29,7 +29,7 @@ Basic Usage
       -f --form             Enable HTML form data (q.v., -D)
       -o --output=FORMAT    One of: auto,body,full,head,headers,stat,status
          --session[=FILE]   Maintain session (enables cookies, defaults to
-                            /tmp/annie.session.$UID)
+                            /tmp/annie.session.$UID) [not implemented]
 
 Usage Examples
 --------------
