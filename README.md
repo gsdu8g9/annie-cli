@@ -27,6 +27,7 @@ Basic Usage
                             foo=bar&baz=boo; else DATA is unparsed and sent raw
       -j --json             Enable JSON data (q.v., -D)
       -f --form             Enable HTML form data (q.v., -D)
+      -o --output=FORMAT    One of: auto,body,full,head,headers,stat,status
          --session[=FILE]   Maintain session (enables cookies, defaults to
                             /tmp/annie.session.$UID)
 

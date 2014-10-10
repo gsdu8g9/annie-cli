@@ -84,7 +84,10 @@ try {
             case "auto":
             case false:
                 if (response.data) console.log(response.data);
-                else console.log(response.statusLine);
+                else {
+                    console.log(response.statusLine);
+                    console.log(response.getHeaderString());
+                }
                 break;
             default:
                 throw new Error("unrecognized argument " + args.named["-o"]);
