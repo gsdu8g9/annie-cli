@@ -9,8 +9,7 @@
   "dependencies": {
     "annie": "richRemer/annie",
     "propertize": "^1.2",
-    "squabble": "*",
-    "es6-promise": "~1"
+    "squabble": "*"
   },
   "devDependencies": {
     "mocha": "~1",
