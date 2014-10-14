@@ -14,13 +14,14 @@ argparser
     .required("URL")
     .flag("-j", "--json")
     .flag("-f", "--form")
+    .flag("-")
     .option("-t", "--type")
     .option("-o", "--output")
     .list("-H", "--head")
     .list("-D", "--data")
     .count("-v", "--verbose")
     .shortOpts()
-    .longOpts()
+    .longOpts();
 
 // handle args
 try {
@@ -56,10 +57,8 @@ try {
     // set log level from --verbose
     command.logLevel = args.named["--verbose"];
     
-    // execute the command and handle the result
-    result = command.execute();
-    result.failure(console.error);
-    result.ready(function(response) {
+    // this function will handle the response
+    function ready(response) {
         switch (args.named["--output"]) {
             case "stat":
                 console.log(response.status);
@@ -93,7 +92,36 @@ try {
             default:
                 throw new Error("unrecognized argument " + args.named["-o"]);
         }
-    });
+    }
+    
+    // check for data on stdin
+    if (args.named["-"]) {
+        var data = "", rl;
+            
+        rl = require("readline").createInterface({
+            input: process.stdin,
+            output: process.stdout
+        }).on("line", function(line) {
+            data += line + "\n";
+        }).on("close", function() {
+            var result;
+
+            command.setData(data);
+            result = command.execute();
+            result.failure(console.error.bind(console));
+            result.ready(ready);
+        });
+        
+        rl.setPrompt("");
+        rl.prompt();
+    }
+    
+    // or just execute
+    else {
+        result = command.execute();
+        result.failure(console.error.bind(console));
+        result.ready(ready);
+    }
 } catch (e) {
     console.error(e.message);
 }
