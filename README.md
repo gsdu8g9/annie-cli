@@ -11,6 +11,15 @@ maps much more closely to the way RESTful services are documented, developed,
 and used than does `curl`.  Fans of shell scripting should also find they can
 easily work with complex REST applications.
 
+Must Haves
+----------
+Though usable, the following features are needed before `annie-cli` can be
+released as a version 1.0.
+
+ * TSL support
+ * multiline entry for message body
+ * session support
+
 Basic Usage
 -----------
 
