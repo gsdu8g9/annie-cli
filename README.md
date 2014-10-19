@@ -16,7 +16,7 @@ Must Haves
 Though usable, the following features are needed before `annie-cli` can be
 released as a version 1.0.
 
- * TSL support
+ * TLS support
  * multiline entry for message body
  * session support
 
