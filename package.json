@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "annie-lib": "~1.1",
-    "propertize": "^1.2",
+    "propertize": "^2",
     "squabble": "*"
   },
   "devDependencies": {
