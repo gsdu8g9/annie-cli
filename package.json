@@ -7,7 +7,7 @@
     "annie": "./bin/annie.js"
   },
   "dependencies": {
-    "annie": "richRemer/annie",
+    "annie-lib": "~1.1",
     "propertize": "^1.2",
     "squabble": "*"
   },

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 var util = require("util"),
     statuses = require("http").STATUS_CODES,
-    annie = require("annie"),
+    annie = require("annie-lib"),
     annieCli = require(".."),
     command = annieCli.createCommand(),
     argparser = require("squabble").createParser(),
@@ -125,4 +125,3 @@ try {
 } catch (e) {
     console.error(e.message);
 }
-
