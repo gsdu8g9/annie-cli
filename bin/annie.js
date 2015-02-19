@@ -28,7 +28,7 @@ try {
     args = argparser.parse();
 
     // URL is present or arg parser would have choked
-    command.url = args.named.URL;
+    command.setUrl(args.named.URL);
 
     // set method if provided; default will be GET
     if (args.named.METHOD) command.setMethod(args.named.METHOD);
@@ -46,7 +46,7 @@ try {
     }
     
     // --type determines how data is parsed
-    if (args.named["--type"]) command.dataType = args.named["--type"];
+    if (args.named["--type"]) command.setDataType(args.named["--type"]);
     
     // set headers from --head
     args.named["--head"].forEach(function(header) {command.addHeader(header);});
