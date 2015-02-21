@@ -17,7 +17,7 @@ Though usable, the following features are needed before `annie-cli` can be
 released as a version 1.0.
 
  * ~~TLS support~~
- * multiline entry for message body
+ * ~~multiline entry for message body~~
  * session support
 
 Basic Usage

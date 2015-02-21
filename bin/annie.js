@@ -107,9 +107,9 @@ try {
             var result;
 
             command.setData(data);
-            result = command.execute();
-            result.failure(console.error.bind(console));
-            result.ready(ready);
+            command.execute()
+                .then(ready)
+                .catch(console.error.bind(console));
         });
         
         rl.setPrompt("");
@@ -117,10 +117,10 @@ try {
     }
     
     // or just execute
-    else {
-        var result = command.execute();
-        result.then(ready).catch(console.error.bind(console));
-    }
+    else command.execute()
+        .then(ready)
+        .catch(console.error.bind(console));
 } catch (e) {
     console.error(e.message);
 }
+
