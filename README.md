@@ -18,6 +18,7 @@ released as a version 1.0.
 
  * ~~TLS support~~
  * ~~multiline entry for message body~~
+ * automatically pipe STDIN to message body
  * session support
 
 Basic Usage
