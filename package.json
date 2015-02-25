@@ -1,6 +1,6 @@
 {
   "name": "annie-cli",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Command line HTTP client.",
   "main": "index.js",
   "bin": {
@@ -9,7 +9,8 @@
   "dependencies": {
     "annie-lib": "~1.1",
     "propertize": "^2",
-    "squabble": "*"
+    "squabble": "*",
+    "querystring": "*"
   },
   "devDependencies": {
     "mocha": "~1",
