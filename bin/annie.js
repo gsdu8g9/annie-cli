@@ -42,7 +42,7 @@ try {
     // --form is the same as -tform -HContent-Type:application/x-www-form-urlencoded
     if (args.named["--form"]) {
         args.set(["-t", "--type"], "form");
-        args.named("--head").push("Content-Type:application/x-www-form-urlencoded");
+        args.named["--head"].push("Content-Type:application/x-www-form-urlencoded");
     }
     
     // --type determines how data is parsed
