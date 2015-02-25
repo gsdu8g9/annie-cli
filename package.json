@@ -1,6 +1,6 @@
 {
   "name": "annie-cli",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Command line HTTP client.",
   "main": "index.js",
   "bin": {
