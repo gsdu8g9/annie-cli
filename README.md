@@ -38,7 +38,7 @@ Basic Usage
       -j --json             Enable JSON data (q.v., -D)
       -f --form             Enable HTML form data (q.v., -D)
       -o --output=FORMAT    One of: auto,body,full,head,headers,stat,status
-         --session[=FILE]   Maintain session (enables cookies, defaults to
+         --session=FILE     Maintain session (enables cookies, defaults to
                             /tmp/annie.session.$UID) [not implemented]
       -                     read input from console (CTRL+D to end)
 
