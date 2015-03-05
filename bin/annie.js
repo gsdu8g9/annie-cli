@@ -71,7 +71,7 @@ try {
                 console.log(response.getHeaderString());
                 break;
             case "body":
-                console.log(response.data);
+                if (response.data) console.log(response.data);
                 break;
             case "status":
                 console.log(response.statusLine);
@@ -79,7 +79,7 @@ try {
             case "full":
                 console.log(response.statusLine);
                 console.log(response.getHeaderString());
-                console.log(response.data);
+                if (response.data) console.log(response.data);
                 break;
             case "auto":
             case false:
@@ -90,7 +90,7 @@ try {
                 }
                 break;
             default:
-                throw new Error("unrecognized argument " + args.named["-o"]);
+                throw new Error("unrecognized out format " + args.named["-o"]);
         }
     }
     
